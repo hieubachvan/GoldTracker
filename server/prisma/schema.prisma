@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+
+model Price {
+  id         Int      @id @default(autoincrement())
+  source     String
+  type       String
+  buyPrice   Float
+  sellPrice  Float
+  unit       String   @default("triệu/lượng")
+  crawledAt  DateTime @default(now())
+  createdAt  DateTime @default(now())
+
+  @@index([source, crawledAt])
+  @@index([crawledAt])
+  @@map("prices")
+}
+
+model Forex {
+  id            Int      @id @default(autoincrement())
+  currency      String
+  buyPrice      Float
+  sellPrice     Float
+  transferPrice Float?
+  source        String   @default("VCB")
+  crawledAt     DateTime @default(now())
+  createdAt     DateTime @default(now())
+
+  @@index([currency, crawledAt])
+  @@map("forex_rates")
+
+}
