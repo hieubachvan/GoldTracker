@@ -19,7 +19,16 @@ const app = express();
 const server = http.createServer(app);
 
 // Middleware
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173', credentials: true }));
+app.use(cors({ 
+  origin: (origin, callback) => {
+    if (!origin || origin.includes('localhost') || origin.includes('103.163.119.207') || origin.endsWith('vercel.app')) {
+      callback(null, true);
+    } else {
+      callback(null, process.env.CLIENT_URL || 'http://localhost:5173');
+    }
+  }, 
+  credentials: true 
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

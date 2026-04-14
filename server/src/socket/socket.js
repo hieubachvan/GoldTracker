@@ -7,8 +7,16 @@ const initSocket = (httpServer) => {
   io = new Server(httpServer, {
     path: '/api/socket.io/',
     cors: {
-      origin: process.env.CLIENT_URL || 'http://localhost:5173',
+      origin: (origin, callback) => {
+        // Accept requests from localhost, the specified CLIENT_URL, or any vercel.app domain
+        if (!origin || origin.includes('localhost') || origin.includes('103.163.119.207') || origin.endsWith('vercel.app')) {
+          callback(null, true);
+        } else {
+          callback(null, process.env.CLIENT_URL || 'http://localhost:5173');
+        }
+      },
       methods: ['GET', 'POST'],
+      credentials: true,
     },
   });
 
