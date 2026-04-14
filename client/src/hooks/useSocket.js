@@ -15,7 +15,6 @@ export const useSocket = () => {
     const socket = io(SERVER_URL, {
       reconnectionAttempts: 10,
       reconnectionDelay: 2000,
-      transports: ['websocket', 'polling'],
     });
     socketRef.current = socket;
 
