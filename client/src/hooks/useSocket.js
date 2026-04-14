@@ -3,7 +3,7 @@ import { io } from 'socket.io-client';
 import { usePriceStore } from '../store/usePriceStore';
 import { useQueryClient } from '@tanstack/react-query';
 
-const SERVER_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+const SERVER_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '' : 'http://localhost:4000');
 
 export const useSocket = () => {
   const socketRef = useRef(null);
