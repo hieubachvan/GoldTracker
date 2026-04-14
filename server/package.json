@@ -4,9 +4,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js",
-    "dev": "node --watch src/server.js"
+    "start": "NODE_ENV=production node src/server.js",
+    "dev": "NODE_ENV=development node --watch src/server.js",
+    "db:up": "docker-compose up -d",
+    "db:down": "docker-compose down",
+    "db:push:prod": "dotenv -e .env.prod -- npx prisma db push"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -25,5 +29,8 @@
     "socket.io": "^4.8.3",
     "winston": "^3.19.0",
     "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^11.0.0"
   }
 }

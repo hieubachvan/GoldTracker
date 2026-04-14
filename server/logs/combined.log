@@ -546,3 +546,224 @@
 [2026-04-14 14:21:39] [32minfo[39m: ⏰ Running gold & silver price crawler...
 [2026-04-14 14:21:39] [32minfo[39m: ⏰ Running forex crawler...
 [2026-04-14 14:21:39] [32minfo[39m: 🚀 Server running on http://localhost:4000
+[2026-04-14 14:21:41] [32minfo[39m: ✅ SQLite (Prisma 5) connected
+[2026-04-14 14:21:41] [32minfo[39m: ✅ Socket.IO initialized
+[2026-04-14 14:21:41] [32minfo[39m: ✅ Cron jobs scheduled (gold: 10min, forex: 15min)
+[2026-04-14 14:21:41] [32minfo[39m: ⏰ Running gold & silver price crawler...
+[2026-04-14 14:21:41] [32minfo[39m: ⏰ Running forex crawler...
+[2026-04-14 14:21:41] [32minfo[39m: 🚀 Server running on http://localhost:4000
+[2026-04-14 14:21:42] [32minfo[39m: ✅ VCB crawer: fetched 9 forex rates
+[2026-04-14 14:21:42] [32minfo[39m: 📡 Emitted new_forex_data to 0 clients
+[2026-04-14 14:21:42] [32minfo[39m: ✅ Forex crawler done: saved 9 rates
+[2026-04-14 14:21:42] [32minfo[39m: ✅ 24h crawler (giá vàng): 8 mục — SJC, DOJI, BTMH, PNJ
+[2026-04-14 14:21:42] [32minfo[39m: ✅ Silver crawler (giá bạc): 6 mục
+[2026-04-14 14:21:42] [32minfo[39m: 📡 Emitted new_price_data to 0 clients
+[2026-04-14 14:21:42] [32minfo[39m: ✅ Gold crawler done: saved 14 records
+[2026-04-14 14:21:45] [32minfo[39m: 🔌 Client connected: 8wyJSTwgzMdkIcgWAAAB
+[2026-04-14 14:21:46] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:25:48] [32minfo[39m: 🔌 Client disconnected: 8wyJSTwgzMdkIcgWAAAB
+[2026-04-14 14:27:36] [32minfo[39m: 🔌 Client connected: Koyy4K_45MrO_f-MAAAD
+[2026-04-14 14:27:37] [32minfo[39m: 🔌 Client disconnected: Koyy4K_45MrO_f-MAAAD
+[2026-04-14 14:27:38] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 14:27:38] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:27:38] [32minfo[39m: 🔌 Client connected: QWgmNdBczt15lZ8kAAAG
+[2026-04-14 14:27:38] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:28:07] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:30:00] [32minfo[39m: ⏰ Running gold & silver price crawler...
+[2026-04-14 14:30:00] [32minfo[39m: ⏰ Running forex crawler...
+[2026-04-14 14:30:00] [32minfo[39m: ✅ 24h crawler (giá vàng): 8 mục — SJC, DOJI, BTMH, PNJ
+[2026-04-14 14:30:00] [32minfo[39m: ✅ VCB crawer: fetched 9 forex rates
+[2026-04-14 14:30:00] [32minfo[39m: ✅ Silver crawler (giá bạc): 6 mục
+[2026-04-14 14:30:00] [32minfo[39m: 📡 Emitted new_forex_data to 1 clients
+[2026-04-14 14:30:00] [32minfo[39m: ✅ Forex crawler done: saved 9 rates
+[2026-04-14 14:30:00] [32minfo[39m: 📡 Emitted new_price_data to 1 clients
+[2026-04-14 14:30:00] [32minfo[39m: ✅ Gold crawler done: saved 14 records
+[2026-04-14 14:30:00] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:30:00] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:36:39] [32minfo[39m: 🔌 Client disconnected: QWgmNdBczt15lZ8kAAAG
+[2026-04-14 14:39:21] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 14:39:21] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:39:21] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:39:21] [32minfo[39m: 🔌 Client connected: lVD1ml3WZDkokcvLAAAJ
+[2026-04-14 14:40:00] [32minfo[39m: ⏰ Running gold & silver price crawler...
+[2026-04-14 14:40:00] [32minfo[39m: ✅ 24h crawler (giá vàng): 8 mục — SJC, DOJI, BTMH, PNJ
+[2026-04-14 14:40:00] [32minfo[39m: ✅ Silver crawler (giá bạc): 6 mục
+[2026-04-14 14:40:00] [32minfo[39m: 📡 Emitted new_price_data to 1 clients
+[2026-04-14 14:40:00] [32minfo[39m: ✅ Gold crawler done: saved 14 records
+[2026-04-14 14:40:00] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:40:00] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:40:18] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:41:32] [32minfo[39m: 🔌 Client disconnected: lVD1ml3WZDkokcvLAAAJ
+[2026-04-14 14:43:09] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:43:09] [32minfo[39m: GET /favicon.ico
+[2026-04-14 14:44:06] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 14:44:06] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:44:07] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:44:07] [32minfo[39m: 🔌 Client connected: hhQidzuI6DS-nMxNAAAM
+[2026-04-14 14:44:07] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:44:07] [32minfo[39m: 🔌 Client connected: NteLtlOfvpqu_-xtAAAP
+[2026-04-14 14:44:07] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:44:08] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:44:08] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:44:22] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 14:44:22] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:45:00] [32minfo[39m: ⏰ Running forex crawler...
+[2026-04-14 14:45:00] [32minfo[39m: ✅ VCB crawer: fetched 9 forex rates
+[2026-04-14 14:45:00] [32minfo[39m: 📡 Emitted new_forex_data to 2 clients
+[2026-04-14 14:45:00] [32minfo[39m: ✅ Forex crawler done: saved 9 rates
+[2026-04-14 14:45:46] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:45:48] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:45:49] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:45:51] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:49:06] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 14:49:06] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:49:07] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:49:22] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 14:49:22] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:49:23] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:50:00] [32minfo[39m: ⏰ Running gold & silver price crawler...
+[2026-04-14 14:50:00] [32minfo[39m: ✅ 24h crawler (giá vàng): 8 mục — SJC, DOJI, BTMH, PNJ
+[2026-04-14 14:50:00] [32minfo[39m: ✅ Silver crawler (giá bạc): 6 mục
+[2026-04-14 14:50:00] [32minfo[39m: 📡 Emitted new_price_data to 2 clients
+[2026-04-14 14:50:00] [32minfo[39m: ✅ Gold crawler done: saved 14 records
+[2026-04-14 14:50:00] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:50:00] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:50:00] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:50:00] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:51:13] [32minfo[39m: 🔌 Client disconnected: hhQidzuI6DS-nMxNAAAM
+[2026-04-14 14:51:14] [32minfo[39m: 🔌 Client connected: gCVG82yTqbp1MHfMAAAR
+[2026-04-14 14:51:14] [32minfo[39m: 🔌 Client disconnected: NteLtlOfvpqu_-xtAAAP
+[2026-04-14 14:51:14] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:51:14] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:51:15] [32minfo[39m: 🔌 Client connected: 8u-XRaJHw1usZrOwAAAT
+[2026-04-14 14:51:16] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:51:16] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:51:32] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 14:51:32] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:51:32] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:51:33] [32minfo[39m: 🔌 Client connected: Ci7Jdg3eFH87oXQEAAAW
+[2026-04-14 14:51:34] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:51:49] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:52:02] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:52:35] [32minfo[39m: 🔌 Client disconnected: gCVG82yTqbp1MHfMAAAR
+[2026-04-14 14:52:35] [32minfo[39m: 🔌 Client disconnected: Ci7Jdg3eFH87oXQEAAAW
+[2026-04-14 14:52:39] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:52:43] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:52:47] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:52:48] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:55:12] [32minfo[39m: 🔌 Client disconnected: 8u-XRaJHw1usZrOwAAAT
+[2026-04-14 14:56:24] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:56:24] [32minfo[39m: GET /favicon.ico
+[2026-04-14 14:58:15] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:58:54] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:59:10] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:59:19] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 14:59:19] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:59:19] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:59:19] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 14:59:19] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:59:19] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:59:19] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:59:19] [32minfo[39m: 🔌 Client connected: OQO0dCE_SaqJQiMaAAAb
+[2026-04-14 14:59:20] [32minfo[39m: 🔌 Client connected: CFWUQUtZ4WDvlXrxAAAc
+[2026-04-14 14:59:38] [32minfo[39m: 🔌 Client disconnected: OQO0dCE_SaqJQiMaAAAb
+[2026-04-14 14:59:38] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 14:59:38] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 14:59:39] [32minfo[39m: GET /api/prices/history
+[2026-04-14 14:59:39] [32minfo[39m: 🔌 Client connected: rkBRj4qubwlcEn_lAAAf
+[2026-04-14 15:00:00] [32minfo[39m: ⏰ Running forex crawler...
+[2026-04-14 15:00:00] [32minfo[39m: ⏰ Running gold & silver price crawler...
+[2026-04-14 15:00:00] [32minfo[39m: ✅ 24h crawler (giá vàng): 8 mục — SJC, DOJI, BTMH, PNJ
+[2026-04-14 15:00:00] [32minfo[39m: ✅ VCB crawer: fetched 9 forex rates
+[2026-04-14 15:00:00] [32minfo[39m: 📡 Emitted new_forex_data to 2 clients
+[2026-04-14 15:00:00] [32minfo[39m: ✅ Forex crawler done: saved 9 rates
+[2026-04-14 15:00:00] [32minfo[39m: ✅ Silver crawler (giá bạc): 6 mục
+[2026-04-14 15:00:00] [32minfo[39m: 📡 Emitted new_price_data to 2 clients
+[2026-04-14 15:00:00] [32minfo[39m: ✅ Gold crawler done: saved 14 records
+[2026-04-14 15:00:00] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:00:00] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:00:00] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:00:00] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:00:15] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 15:01:09] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:04:39] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 15:04:39] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 15:05:20] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 15:05:20] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 15:05:20] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:05:20] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:05:46] [32minfo[39m: ✅ SQLite (Prisma 5) connected
+[2026-04-14 15:05:46] [32minfo[39m: ✅ Socket.IO initialized
+[2026-04-14 15:05:46] [32minfo[39m: ✅ Cron jobs scheduled (gold: 10min, forex: 15min)
+[2026-04-14 15:05:46] [32minfo[39m: ⏰ Running gold & silver price crawler...
+[2026-04-14 15:05:46] [32minfo[39m: ⏰ Running forex crawler...
+[2026-04-14 15:05:46] [32minfo[39m: 🚀 Server running on http://localhost:4000
+[2026-04-14 15:05:49] [32minfo[39m: ✅ SQLite (Prisma 5) connected
+[2026-04-14 15:05:49] [32minfo[39m: ✅ Socket.IO initialized
+[2026-04-14 15:05:49] [32minfo[39m: ✅ Cron jobs scheduled (gold: 10min, forex: 15min)
+[2026-04-14 15:05:49] [32minfo[39m: ⏰ Running gold & silver price crawler...
+[2026-04-14 15:05:49] [32minfo[39m: ⏰ Running forex crawler...
+[2026-04-14 15:05:49] [32minfo[39m: 🚀 Server running on http://localhost:4000
+[2026-04-14 15:05:49] [32minfo[39m: ✅ VCB crawer: fetched 9 forex rates
+[2026-04-14 15:05:49] [32minfo[39m: ✅ 24h crawler (giá vàng): 8 mục — SJC, DOJI, BTMH, PNJ
+[2026-04-14 15:05:49] [32minfo[39m: 📡 Emitted new_forex_data to 0 clients
+[2026-04-14 15:05:49] [32minfo[39m: ✅ Forex crawler done: saved 9 rates
+[2026-04-14 15:05:50] [32minfo[39m: ✅ Silver crawler (giá bạc): 6 mục
+[2026-04-14 15:05:50] [32minfo[39m: 📡 Emitted new_price_data to 0 clients
+[2026-04-14 15:05:50] [32minfo[39m: ✅ Gold crawler done: saved 14 records
+[2026-04-14 15:05:50] [32minfo[39m: 🔌 Client connected: e96D6PsshKjCNdL_AAAB
+[2026-04-14 15:05:50] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:05:50] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:05:52] [32minfo[39m: 🔌 Client connected: tBs7eGYu4pn70vVqAAAD
+[2026-04-14 15:05:53] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:09:39] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 15:09:39] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 15:10:00] [32minfo[39m: ⏰ Running gold & silver price crawler...
+[2026-04-14 15:10:00] [32minfo[39m: ✅ 24h crawler (giá vàng): 8 mục — SJC, DOJI, BTMH, PNJ
+[2026-04-14 15:10:00] [32minfo[39m: ✅ Silver crawler (giá bạc): 6 mục
+[2026-04-14 15:10:00] [32minfo[39m: 📡 Emitted new_price_data to 2 clients
+[2026-04-14 15:10:00] [32minfo[39m: ✅ Gold crawler done: saved 14 records
+[2026-04-14 15:10:00] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:10:00] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:11:59] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 15:11:59] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 15:13:23] [31merror[39m: ❌ Database connection error:
+[2026-04-14 15:15:55] [32minfo[39m: ✅ SQLite (Prisma 5) connected
+[2026-04-14 15:15:55] [32minfo[39m: ✅ Socket.IO initialized
+[2026-04-14 15:15:55] [32minfo[39m: ✅ Cron jobs scheduled (gold: 10min, forex: 15min)
+[2026-04-14 15:15:55] [32minfo[39m: ⏰ Running gold & silver price crawler...
+[2026-04-14 15:15:55] [32minfo[39m: ⏰ Running forex crawler...
+[2026-04-14 15:15:55] [32minfo[39m: 🚀 Server running on http://localhost:4000
+[2026-04-14 15:15:55] [32minfo[39m: ✅ VCB crawer: fetched 9 forex rates
+[2026-04-14 15:15:55] [32minfo[39m: ✅ 24h crawler (giá vàng): 8 mục — SJC, DOJI, BTMH, PNJ
+[2026-04-14 15:15:55] [32minfo[39m: 📡 Emitted new_forex_data to 0 clients
+[2026-04-14 15:15:55] [32minfo[39m: ✅ Forex crawler done: saved 9 rates
+[2026-04-14 15:15:55] [32minfo[39m: ✅ Silver crawler (giá bạc): 6 mục
+[2026-04-14 15:15:55] [32minfo[39m: 📡 Emitted new_price_data to 0 clients
+[2026-04-14 15:15:55] [32minfo[39m: ✅ Gold crawler done: saved 14 records
+[2026-04-14 15:15:57] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 15:15:57] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 15:15:57] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:15:57] [32minfo[39m: 🔌 Client connected: AuB7DvKa5Xsu6R-UAAAC
+[2026-04-14 15:15:57] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:16:01] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:16:02] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:16:05] [32minfo[39m: POST /api/sync
+[2026-04-14 15:16:05] [32minfo[39m: ⏰ Running gold & silver price crawler...
+[2026-04-14 15:16:05] [32minfo[39m: ⏰ Running forex crawler...
+[2026-04-14 15:16:05] [32minfo[39m: ✅ VCB crawer: fetched 9 forex rates
+[2026-04-14 15:16:05] [32minfo[39m: ✅ 24h crawler (giá vàng): 8 mục — SJC, DOJI, BTMH, PNJ
+[2026-04-14 15:16:05] [32minfo[39m: 📡 Emitted new_forex_data to 1 clients
+[2026-04-14 15:16:05] [32minfo[39m: ✅ Forex crawler done: saved 9 rates
+[2026-04-14 15:16:05] [32minfo[39m: ✅ Silver crawler (giá bạc): 6 mục
+[2026-04-14 15:16:05] [32minfo[39m: 📡 Emitted new_price_data to 1 clients
+[2026-04-14 15:16:05] [32minfo[39m: ✅ Gold crawler done: saved 14 records
+[2026-04-14 15:16:05] [32minfo[39m: GET /api/prices/history
+[2026-04-14 15:19:49] [32minfo[39m: GET /api/prices/latest
+[2026-04-14 15:19:49] [32minfo[39m: GET /api/forex/latest
+[2026-04-14 15:20:00] [32minfo[39m: ⏰ Running gold & silver price crawler...
+[2026-04-14 15:20:00] [32minfo[39m: ✅ 24h crawler (giá vàng): 8 mục — SJC, DOJI, BTMH, PNJ
+[2026-04-14 15:20:00] [32minfo[39m: ✅ Silver crawler (giá bạc): 6 mục
+[2026-04-14 15:20:00] [32minfo[39m: 📡 Emitted new_price_data to 1 clients
+[2026-04-14 15:20:00] [32minfo[39m: ✅ Gold crawler done: saved 14 records
+[2026-04-14 15:20:00] [32minfo[39m: GET /api/prices/history

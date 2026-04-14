@@ -1,4 +1,10 @@
-require('dotenv').config();
+const path = require('path');
+const dotenv = require('dotenv');
+
+// Load environment variables based on NODE_ENV
+const envFile = process.env.NODE_ENV === 'production' ? '.env.prod' : '.env';
+dotenv.config({ path: path.join(__dirname, '..', envFile) });
+
 const http = require('http');
 const express = require('express');
 const cors = require('cors');
