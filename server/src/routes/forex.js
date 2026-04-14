@@ -12,11 +12,10 @@ router.get('/latest', async (req, res) => {
     if (cached) return res.json({ source: 'cache', data: cached });
 
     const prisma = getPrisma();
-    const latest = await prisma.$queryRaw`
-      SELECT DISTINCT ON (currency) *
-      FROM forex_rates
-      ORDER BY currency, "crawledAt" DESC
-    `;
+    const latest = await prisma.forex.findMany({
+      distinct: ['currency'],
+      orderBy: { crawledAt: 'desc' }
+    });
 
     res.json({ source: 'db', data: latest });
   } catch (err) {
@@ -34,11 +33,12 @@ router.get('/history', async (req, res) => {
 
     const rates = await prisma.forex.findMany({
       where: currency ? { currency: currency.toUpperCase() } : {},
-      orderBy: { crawledAt: 'asc' },
+      orderBy: { crawledAt: 'desc' },
       take: parseInt(limit),
     });
 
-    res.json({ data: rates });
+    res.json({ data: rates.reverse() });
+
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

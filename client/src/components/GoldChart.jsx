@@ -12,6 +12,7 @@ import { usePriceStore } from '../store/usePriceStore';
 import { useGoldHistory } from '../hooks/useGoldPrice';
 
 const FIELD_LABELS = { buyPrice: 'Giá Mua', sellPrice: 'Giá Bán' };
+const SOURCES = ['SJC', 'PNJ', 'DOJI', 'BTMH', 'Phú Quý (Bạc)'];
 
 function formatTime(ts) {
   return new Date(ts).toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
@@ -28,7 +29,9 @@ const CustomTooltip = ({ active, payload, label }) => {
   );
 };
 
-export default function GoldChart({ source }) {
+export default function GoldChart() {
+  const source = usePriceStore((s) => s.selectedSource);
+  const setSelectedSource = usePriceStore((s) => s.setSelectedSource);
   const selectedChart = usePriceStore((s) => s.selectedChart);
   const setSelectedChart = usePriceStore((s) => s.setSelectedChart);
   const pricesBySrc = usePriceStore((s) => s.pricesBySrc);
@@ -48,7 +51,24 @@ export default function GoldChart({ source }) {
     : null;
 
   return (
-    <div className="card p-5 h-full">
+    <div className="card p-5 h-full flex flex-col">
+      {/* Source Selector Internal */}
+      <div className="flex gap-1.5 overflow-x-auto pb-4 mb-4 border-b border-surface-border/40 scrollbar-hide">
+        {SOURCES.map((s) => (
+          <button
+            key={s}
+            onClick={() => setSelectedSource(s)}
+            className={`text-[10px] px-3 py-1.5 rounded-lg transition-all font-bold uppercase tracking-wider whitespace-nowrap ${
+              source === s
+                ? 'bg-gold-500/20 text-gold-400 border border-gold-500/30'
+                : 'bg-surface-hover text-gray-500 hover:text-gray-300 border border-transparent'
+            }`}
+          >
+            {s}
+          </button>
+        ))}
+      </div>
+
       <div className="flex items-center justify-between mb-4">
         <div>
           <h2 className="section-title">Biểu đồ {source}</h2>
@@ -70,6 +90,7 @@ export default function GoldChart({ source }) {
           ))}
         </div>
       </div>
+
 
       {isLoading ? (
         <div className="flex items-center justify-center h-48 text-gray-600 text-sm animate-pulse-slow">

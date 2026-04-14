@@ -1,5 +1,6 @@
 import PriceCard from '../components/PriceCard';
 import GoldChart from '../components/GoldChart';
+import PriceCalculator from '../components/PriceCalculator';
 import ForexTable from '../components/ForexTable';
 import { usePriceStore } from '../store/usePriceStore';
 import { useGoldPrice, useForex } from '../hooks/useGoldPrice';
@@ -14,8 +15,6 @@ export default function Dashboard() {
   useGoldPrice();
   useForex();
 
-  const selectedSource = usePriceStore((s) => s.selectedSource);
-  const setSelectedSource = usePriceStore((s) => s.setSelectedSource);
   const pricesBySrc = usePriceStore((s) => s.pricesBySrc);
   
   // Extract real SJC prices for the Hero section
@@ -46,24 +45,22 @@ export default function Dashboard() {
         </div>
       </section>
 
+      {/* Analysis & Tools */}
+      <section className="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+        <div className="lg:col-span-2">
+            <GoldChart />
+        </div>
+        <div className="h-full">
+            <PriceCalculator />
+        </div>
+      </section>
+
       {/* Price Cards Grid (Masonry) */}
       <section className="mb-10">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="section-title">Giá vàng & bạc theo nguồn</h2>
-          <div className="flex gap-1.5 overflow-x-auto pb-2 scrollbar-hide">
-            {SOURCES.map((s) => (
-              <button
-                key={s}
-                onClick={() => setSelectedSource(s)}
-                className={`text-xs px-4 py-2 rounded-xl transition-all font-mono whitespace-nowrap ${
-                  selectedSource === s
-                    ? 'bg-gold-500 text-black font-bold shadow-[0_0_15px_rgba(250,204,21,0.2)]'
-                    : 'bg-surface-hover text-gray-400 hover:text-white hover:bg-surface-card border border-white/5'
-                }`}
-              >
-                {s}
-              </button>
-            ))}
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h2 className="section-title">Giá vàng & bạc toàn quốc</h2>
+            <p className="text-xs text-gray-500 mt-1">Dữ liệu được tổng hợp từ các nguồn uy tín hàng đầu</p>
           </div>
         </div>
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
@@ -76,11 +73,6 @@ export default function Dashboard() {
       </section>
 
 
-      {/* Chart */}
-      <section className="mb-8">
-        <GoldChart source={selectedSource} />
-      </section>
-
       {/* Forex table */}
       <section>
         <ForexTable />
@@ -88,6 +80,7 @@ export default function Dashboard() {
     </main>
   );
 }
+
 
 function StatItem({ label, sublabel, value, color = "text-white" }) {
   return (
