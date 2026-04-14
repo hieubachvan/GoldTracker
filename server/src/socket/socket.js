@@ -5,6 +5,7 @@ let io = null;
 
 const initSocket = (httpServer) => {
   io = new Server(httpServer, {
+    path: '/api/socket.io/',
     cors: {
       origin: process.env.CLIENT_URL || 'http://localhost:5173',
       methods: ['GET', 'POST'],

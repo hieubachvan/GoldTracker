@@ -11,7 +11,8 @@ export default function Header() {
     if (isSyncing) return;
     setIsSyncing(true);
     try {
-      await fetch('http://localhost:4000/api/sync', { method: 'POST' });
+      const baseUrl = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '' : 'http://localhost:4000');
+      await fetch(`${baseUrl}/api/sync`, { method: 'POST' });
     } catch (err) {
       console.error('Failed to trigger sync manually', err);
     } finally {

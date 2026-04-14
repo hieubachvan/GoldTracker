@@ -13,6 +13,7 @@ export const useSocket = () => {
   useEffect(() => {
     setConnectionStatus('connecting');
     const socket = io(SERVER_URL, {
+      path: '/api/socket.io/',
       reconnectionAttempts: 10,
       reconnectionDelay: 2000,
     });
