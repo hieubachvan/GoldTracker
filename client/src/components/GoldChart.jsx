@@ -18,6 +18,20 @@ function formatTime(ts) {
   return new Date(ts).toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
 }
 
+// Gom các điểm liên tiếp có cùng giá trị thành 1 điểm
+function deduplicateFlat(data) {
+  if (!data.length) return data;
+  const result = [data[0]];
+  for (let i = 1; i < data.length; i++) {
+    const prev = result[result.length - 1];
+    const curr = data[i];
+    if (curr.buyPrice !== prev.buyPrice || curr.sellPrice !== prev.sellPrice) {
+      result.push(curr);
+    }
+  }
+  return result;
+}
+
 const CustomTooltip = ({ active, payload, label }) => {
   if (!active || !payload?.length) return null;
   const p = payload[0];
@@ -39,11 +53,13 @@ export default function GoldChart() {
   const firstType = pricesBySrc[source]?.[0]?.type;
   const { data: history, isLoading } = useGoldHistory(source, firstType);
 
-  const chartData = (history || []).map((p) => ({
-    time: new Date(p.crawledAt).getTime(),
-    buyPrice: p.buyPrice,
-    sellPrice: p.sellPrice,
-  }));
+  const chartData = deduplicateFlat(
+    (history || []).map((p) => ({
+      time: new Date(p.crawledAt).getTime(),
+      buyPrice: p.buyPrice,
+      sellPrice: p.sellPrice,
+    }))
+  );
 
   const currentData = pricesBySrc[source]?.[0];
   const avg = chartData.length
@@ -58,11 +74,10 @@ export default function GoldChart() {
           <button
             key={s}
             onClick={() => setSelectedSource(s)}
-            className={`text-[10px] px-3 py-1.5 rounded-lg transition-all font-bold uppercase tracking-wider whitespace-nowrap ${
-              source === s
-                ? 'bg-gold-500/20 text-gold-400 border border-gold-500/30'
-                : 'bg-surface-hover text-gray-500 hover:text-gray-300 border border-transparent'
-            }`}
+            className={`text-[10px] px-3 py-1.5 rounded-lg transition-all font-bold uppercase tracking-wider whitespace-nowrap ${source === s
+              ? 'bg-gold-500/20 text-gold-400 border border-gold-500/30'
+              : 'bg-surface-hover text-gray-500 hover:text-gray-300 border border-transparent'
+              }`}
           >
             {s}
           </button>
@@ -79,11 +94,10 @@ export default function GoldChart() {
             <button
               key={key}
               onClick={() => setSelectedChart(key)}
-              className={`text-xs px-3 py-1.5 rounded-lg transition-all font-medium ${
-                selectedChart === key
-                  ? 'bg-gold-500 text-black'
-                  : 'bg-surface-hover text-gray-400 hover:text-gray-200'
-              }`}
+              className={`text-xs px-3 py-1.5 rounded-lg transition-all font-medium ${selectedChart === key
+                ? 'bg-gold-500 text-black'
+                : 'bg-surface-hover text-gray-400 hover:text-gray-200'
+                }`}
             >
               {label}
             </button>
