@@ -10,7 +10,6 @@ import {
 } from 'recharts';
 import { usePriceStore } from '../store/usePriceStore';
 import { useGoldHistory } from '../hooks/useGoldPrice';
-
 const FIELD_LABELS = { buyPrice: 'Giá Mua', sellPrice: 'Giá Bán' };
 const SOURCES = ['SJC', 'PNJ', 'DOJI', 'BTMH', 'Phú Quý (Bạc)'];
 

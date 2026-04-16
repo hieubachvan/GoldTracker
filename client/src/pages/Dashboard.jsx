@@ -1,5 +1,6 @@
 import PriceCard from '../components/PriceCard';
 import GoldChart from '../components/GoldChart';
+import WorldPriceChart from '../components/WorldPriceChart';
 import PriceCalculator from '../components/PriceCalculator';
 import ForexTable from '../components/ForexTable';
 import { usePriceStore } from '../store/usePriceStore';
@@ -47,8 +48,13 @@ export default function Dashboard() {
 
       {/* Analysis & Tools */}
       <section className="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2 space-y-6">
             <GoldChart />
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <WorldPriceChart pid={68} title="Giá Vàng Thế Giới" color="#eab308" />
+              <WorldPriceChart pid={69} title="Giá Bạc Thế Giới" isSilver={true} color="#94a3b8" />
+            </div>
         </div>
         <div className="h-full">
             <PriceCalculator />
